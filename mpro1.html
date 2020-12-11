@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>my project</title>
+    <style>
+        h1 {
+            font-size: x-large;
+            color: green;
+            font-family: 'Times New Roman';
+            border: solid blue 6px;
+            background: yellow;
+        }
+       p{
+       	font-size:x-large;
+       	color:blue;
+       	font-family:Italic;
+         text-align:center;
+       }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center">INSULIN RESERVIER</h1>
+    <p>This machine Checks the sugar level after every 10 seconds..<br /> It also inject insulin automatically when sugar is high</p>
+
+    <script>
+        var timeout=setInterval(function() {//=setInterval(myfunction(),10000);
+           var mydate = new Date();  
+              var random = Math.floor((Math.random() * 5) + 1);
+            console.log('random');
+var message='';
+            if (random >= 3) {
+                
+                // alert("High sugar level so we have injected 200 ml insulin at:"+mydate);
+                 message = "High sugar level so we have injected 200 ml insulin at:" + mydate;
+            } else if(random==2) {
+                // alert("You need sugar");
+                 message = "You have normal sugar level at :"+mydate+" so just chill";
+
+            }
+            else{
+            	 message=`you have low sugar level so have some sugar ${mydate}`;
+            }
+
+            console.log(message);
+
+        }, 5000);
+
+    </script>
+
+</body>
+
+</html>
